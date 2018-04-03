@@ -1,0 +1,12 @@
+---
+machine:
+  environment:
+    NODE_ENV: fortress-shell
+general:
+  branches:
+    only:
+      - master
+      - develop
+test:
+  override:
+    - npm test
