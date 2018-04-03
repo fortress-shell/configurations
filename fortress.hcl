@@ -6,7 +6,7 @@ job "task" {
     meta_required = [
       "build_id",
       "user_id",
-      "repository",
+      "repository_url",
       "branch",
       "commit",
       "ssh_key"
