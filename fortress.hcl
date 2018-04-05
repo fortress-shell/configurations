@@ -20,7 +20,7 @@ job "task" {
     task "build" {
       driver = "raw_exec"
       env {
-        CONFIG_PATH = "${NOMAD_TASK_DIR}/payload.yml"
+        PAYLOAD_PATH = "${NOMAD_TASK_DIR}/payload.yml"
       }
       config {
         command = "fortress.sh"
