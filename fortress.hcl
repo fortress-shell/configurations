@@ -23,7 +23,7 @@ job "task" {
         CONFIG_PATH = "${NOMAD_TASK_DIR}/payload.yml"
       }
       config {
-        command = "fortress-shell"
+        command = "fortress.sh"
       }
       dispatch_payload {
         file = "payload.yml"

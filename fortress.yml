@@ -1,12 +1,13 @@
 ---
 machine:
   environment:
-    NODE_ENV: fortress-shell
-general:
-  branches:
-    only:
-      - master
-      - develop
+    FORTRESS_SHELL: test
 test:
   override:
-    - npm test
+    - echo $FORTRESS_SHELL
+    - sleep 30
+    - echo shit
+    - curl http://artii.herokuapp.com/make?text=ASCII+art > file.txt
+    - curl http://artii.herokuapp.com/make?text=testing >> file.txt
+    - curl http://artii.herokuapp.com/make?text=LatestNews >> file.txt
+    - cat file.txt
